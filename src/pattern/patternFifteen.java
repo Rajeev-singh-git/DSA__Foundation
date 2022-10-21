@@ -1,4 +1,4 @@
-package Style;
+package pattern;
 
 import java.util.Scanner;
 
