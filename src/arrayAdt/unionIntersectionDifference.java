@@ -8,10 +8,6 @@ public class unionIntersectionDifference {
         int [] bs = {2,4,5,7,12};
         int [] cs = new int [as.length+bs.length];
 
-
-
-
-
         sortedUnion(as,bs,cs);
         System.out.println("Union for sorted element");
         display(cs);
@@ -20,9 +16,7 @@ public class unionIntersectionDifference {
         System.out.println("Difference for sorted array");
         sortedDiff(as,bs); //print  only those element which are not present in 2nd array
         
-
-
-    }
+  }
 
     private static void sortedDiff(int[] as, int[] bs) {
         int i,j;
@@ -83,31 +77,8 @@ public class unionIntersectionDifference {
         for(;j<b.length;j++){
             c[k++]=b[j];
         }
-
-
     }
 
-    private static void unsortedUnion(int[] a, int[] b, int[] c) {
-           int i=0,k=0,s=0;
-
-            for(int j=0;j<a.length;j++){
-                c[i++]=a[j];
-            }
-
-          while(k<b.length){
-              while(s<a.length){
-                  if(b[k]==a[s]){
-                      k++;
-                      s++;
-                  }else{
-                      c[i++]= b[k++];
-                       s++;
-                  }
-
-              }
-
-          }
-     }
 
      private static void display(int [] c){
         for(int n:c){
