@@ -4,13 +4,13 @@ public class duplicateElement {
 
     public static void main(String [] args){
 
-        int [] arr = {3,3,6,7,14,14,15};
+        int [] arr = {3,3,6,7,7,14};
         int [] unSorted = {18,18,3,3,6,7,14,14,15,15,15};
 
-        findDuplicate(arr);
-        countDuplicate(arr); //if last number is repeating, this code is not working, do check again
-        countDuplicateHash(arr); //if last number is repeating, this code is not working, do check again
-        countDuplicateUnsorted(unSorted);
+          findDuplicate(arr);
+          countDuplicate(arr); //if last number is repeating, this code is not working, do check again
+          countDuplicateHash(arr);
+          countDuplicateUnsorted(unSorted);
 
 
     }
@@ -32,17 +32,21 @@ public class duplicateElement {
 
     private static void countDuplicate(int[] arr) {
 
+
+
         for(int i=0;i<arr.length-1;i++){
 
-            if(arr[i]==arr[i+1]){
-               int j=i+1;
-               while(arr[j]==arr[i])
+            int count =1;
+
+               while(arr[i]==arr[i+1])
                {
-                   j++;
+                   count++;
+                   i++;
                }
-               System.out.println(arr[i]+ " comes " +(j-i)+ " times");
-               i=j-1;
-            }
+               if(count>1)
+               System.out.println(arr[i]+ " comes " +count+ " times");
+
+
         }
 
     }
@@ -55,10 +59,10 @@ public class duplicateElement {
              max=n;
         }
 
-        int [] Hash = new int[max];
+        int [] Hash = new int[max+1];
 
 
-       for(int i=0;i<arr.length-1;i++){
+       for(int i=0;i<arr.length;i++){
            Hash[arr[i]]++;
        }
 
