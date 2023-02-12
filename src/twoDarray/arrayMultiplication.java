@@ -53,5 +53,46 @@ public class arrayMultiplication {
             }
             System.out.println();
         }
+
+        System.out.println("No of row in matrix " +a3.length);
+        System.out.println("No of column in matrix " +a3[0].length);
+
+        System.out.println("Multiply matrix");
+
+        multiplyMatrix(a1,a2);
+
+
+    }
+
+
+
+    static void multiplyMatrix(int A[][], int B[][]){
+
+        int colA = A[0].length;
+        int rowB = B.length;
+
+        int[][] res = new int[A.length][B[0].length];
+
+        if(colA!=rowB){
+            System.out.println("Multiplication not possible");
+        }
+
+        for(int i=0;i<res.length;i++){
+            for(int j=0;j<res[0].length;j++){
+                for(int k=0;k< B.length;k++){
+                    res[i][j] += A[i][k] * B[k][j];
+                }
+            }
+        }
+
+
+        for(int s=0;s<res.length;s++){
+            for(int t=0;t<res[0].length;t++)  {
+                System.out.print(res[s][t]+" ");
+            }
+            System.out.println();
+        }
+
+
     }
 }
