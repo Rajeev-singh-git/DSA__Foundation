@@ -23,6 +23,8 @@ public class rotate90degree {
 
         int k=arr[0].length-1;
 
+        
+
         while(k>=0) {
             for (int i = 0; i < arr.length; i++) {
                 int s = 0;
