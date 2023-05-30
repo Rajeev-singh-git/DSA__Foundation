@@ -1,4 +1,6 @@
-class Solution
+package matrix;
+
+class exchangeMatrixColumn
 {
     //Function to exchange first column of a matrix with its last column.
     static void exchangeColumns(int matrix[][])
@@ -10,13 +12,21 @@ class Solution
             matrix[r][j]=matrix[r][i];
             matrix[r][i]=temp;
          }
+
+        for (int[] row : matrix) {
+            for (int col : row) {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
         
     }
 }
 
-
+/**
 Input:
 n1 = 2, m1 = 3
 matrix[][] = {{4, 3, 2},
               {1, 5, 6}}
 Output: 2 3 4 6 5 1
+ */

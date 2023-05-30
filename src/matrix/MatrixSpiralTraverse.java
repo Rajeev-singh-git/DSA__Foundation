@@ -1,7 +1,11 @@
-class Solution
+package matrix;
+
+import java.util.ArrayList;
+
+class MatrixSpiralTraverse
 {
     //Function to return a list of integers denoting spiral traversal of matrix.
-    static ArrayList<Integer> spirallyTraverse(int matrix[][], int r, int c)
+    static void spirallyTraverse(int matrix[][], int r, int c)
     {
         int left = 0;
         int right = c-1;
@@ -34,7 +38,9 @@ class Solution
             }
             
         }
-        
-        return list;
+
+        for (int i : list) {
+            System.out.println(i);
+        }
     }
 }

@@ -1,7 +1,11 @@
-class Solution
+package matrix;
+
+import java.util.ArrayList;
+
+class MatrixSnakePattern
 {
     //Function to return list of integers visited in snake pattern in matrix.
-    static ArrayList<Integer> snakePattern(int matrix[][])
+    static void snakePattern(int matrix[][])
     {
         // code here 
         
@@ -19,10 +23,16 @@ class Solution
                         list.add(matrix[i][j]);
                      }
                    }
-            }   
-         
-           return list;
+            }
+
+        //   return list;
+
+         for (int i : list) {
+             System.out.println(i);
+         }
      
         }
+
+
         
 }

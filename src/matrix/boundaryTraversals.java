@@ -1,8 +1,12 @@
-class Solution
+package matrix;
+
+import java.util.ArrayList;
+
+class boundaryTraversals
 {
     //Function to return list of integers that form the boundary 
     //traversal of the matrix in a clockwise manner.
-    static ArrayList<Integer> boundaryTraversal(int matrix[][], int n, int m)
+    static void  boundaryTraversal(int matrix[][], int n, int m)
     {
         
         
@@ -31,9 +35,11 @@ class Solution
             }
              
         }
-        
-        
-        return list;
+
+
+        for (int i : list) {
+            System.out.println(i);
+        }
         
     }
 }

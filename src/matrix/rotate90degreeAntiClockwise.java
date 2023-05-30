@@ -1,10 +1,12 @@
-class Solution
+package matrix;
+
+class rotate90degreeAntiClockwise
 {
     //Function to rotate matrix anticlockwise by 90 degrees.
     static void rotateby90(int matrix[][], int n) 
     { 
      
-        //Transpse of Matrix = 1st row become 1st column, 2nd row become 2nd column ....last row become last column 
+        //Transpose of Matrix = 1st row become 1st column, 2nd row become 2nd column ....last row become last column
         
         for(int i=0;i<n;i++){
             for(int j=i+1;j<n;j++){

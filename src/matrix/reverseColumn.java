@@ -1,5 +1,6 @@
+package matrix;
 
-class Solution
+class reverseColumn
 {
     //Function to reverse the columns of a matrix.
     static void reverseCol(int matrix[][])
