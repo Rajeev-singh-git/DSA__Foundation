@@ -12,6 +12,18 @@ public class patternSearching {
         String s2 = scn.nextLine();
 
         checkPattern(s1,s2);
+
+        System.out.println("Approach 2 ..................................................");
+        isPatternMatched(s1,s2); //better Method
+    }
+
+    private static void isPatternMatched(String s1, String s2) {
+
+        if (s1.contains(s2))
+            System.out.println("Pattern Matched");
+         else
+            System.out.println("Pattern didn't  Matched");
+
     }
 
     private static void checkPattern(String s1, String s2) {
