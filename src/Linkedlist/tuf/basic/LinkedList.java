@@ -28,7 +28,13 @@ public class LinkedList{
     public static void main(String [] args){
         int [] arr = {2,5,6,8};
         Node head = convertArr2LL(arr);
-        System.out.println(head.data);
+        System.out.println("Head is "+ head.data);
+        System.out.println("Traversed linkedlist is ");
+        Node temp = head;
+        while(temp!=null){
+             System.out.println(temp.data);
+             temp =  temp.next;
+        }
     }
 
     private static Node convertArr2LL(int[]arr){
