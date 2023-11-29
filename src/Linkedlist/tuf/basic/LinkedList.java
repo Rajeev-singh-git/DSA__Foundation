@@ -35,6 +35,35 @@ public class LinkedList{
              System.out.println(temp.data);
              temp =  temp.next;
         }
+        System.out.println("Length of linkedlist is "+ lengthOfLL(head));
+        int target = 2;
+        int result = (checkIfAvailable(head, target));
+        if(result==-1)
+            System.out.println(target + " is not available in linkedlist");
+        else
+          System.out.println(target + " is available in linkedlist");
+    }
+
+    private static int checkIfAvailable(Node head, int i) {
+        Node temp = head;
+
+        while(temp!=null){
+            if(temp.data==i)
+                return i;
+            temp = temp.next;
+        }
+        return -1;
+
+    }
+
+    private static int lengthOfLL(Node head){
+          int count = 0;
+          Node temp = head;
+          while(temp!=null){
+              temp = temp.next;
+              count++;
+          }
+          return count;
     }
 
     private static Node convertArr2LL(int[]arr){
