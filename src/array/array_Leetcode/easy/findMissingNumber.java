@@ -31,6 +31,10 @@ public class findMissingNumber {
 
 
 
+        System.out.println("Missing Number using Brute Force approach "+ HashingMissingNumber(nums));
+
+
+
     }
 
     private static int BruteMissingNumber(int[] nums) {
@@ -56,4 +60,27 @@ public class findMissingNumber {
         return n;
 
     }
+
+        public static int HashingMissingNumber(int[] nums) {
+
+            int n = nums.length;
+            int[] hashArray = new int[n + 1];
+
+
+
+            for (int i = 0; i < n; i++) {
+                hashArray[nums[i]] = 1;
+            }
+
+            for (int i = 0; i <= n; i++) {
+                if (hashArray[i] == 0)
+                    return i;
+            }
+
+            return 0;
+
+
+        }
+
+
 }
