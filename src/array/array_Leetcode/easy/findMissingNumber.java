@@ -22,7 +22,7 @@ public class findMissingNumber {
         int n = scn.nextInt();
         int[] nums = new int[n];
 
-        System.out.println("Enter the values in array (all values should be unique, smaller than or equal to n, 1 value should be missing ");
+        System.out.println("Enter the values in array (all values should be unique, smaller than or equal to size of array, 1 value should be missing");
         for (int i = 0; i < nums.length; i++) {
             nums[i] = scn.nextInt();
         }
@@ -31,8 +31,29 @@ public class findMissingNumber {
 
 
 
-        System.out.println("Missing Number using Brute Force approach "+ HashingMissingNumber(nums));
+        System.out.println("Missing Number using Hashing approach (Better) "+ HashingMissingNumber(nums));
 
+
+        System.out.println("Missing Number using Optimal (XOR) approach "+ OptimalMissingNumber(nums));
+
+
+
+    }
+
+    private static int OptimalMissingNumber(int[] nums) {
+
+        int expXor = 0;
+        int actualXor=0;
+
+        for(int i=0;i<=nums.length;i++){
+            expXor = expXor ^ i;
+        }
+
+        for(int i=0;i<nums.length;i++){
+            actualXor = actualXor ^ nums[i];
+        }
+
+        return expXor^actualXor;
 
 
     }
