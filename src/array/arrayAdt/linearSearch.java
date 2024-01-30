@@ -1,4 +1,4 @@
-package arrayAdt;
+package array.arrayAdt;
 
 import java.util.Scanner;
 public class linearSearch {

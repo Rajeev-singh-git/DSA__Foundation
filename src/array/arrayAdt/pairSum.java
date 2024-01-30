@@ -1,4 +1,4 @@
-package arrayAdt;
+package array.arrayAdt;
 
 public class pairSum {
 
