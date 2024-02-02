@@ -29,7 +29,7 @@ public class BubbleSort {
 
         for(int i=1;i<arr.length;i++){
 
-         //   System.out.println("Outer  loop  executed" +i+ " time");
+         //   System.out.println("Outer  loop  executed " +i+ " time");
 
             for(int j=0;j<arr.length-i; j++){
                 if(isGreater(arr,j,j+1)){
