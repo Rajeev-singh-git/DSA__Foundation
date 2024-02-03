@@ -2,7 +2,7 @@ package sort;
 
 import java.util.Scanner;
 
-public class BubbleSort {
+public class SelectionSort {
 
     public static  void main(String [] args){
 
@@ -19,26 +19,24 @@ public class BubbleSort {
             arr[i]=scn.nextInt();
         }
 
-        bubbleSort(arr);
-
+        selectionSort(arr);
 
     }
 
-    public static  void bubbleSort(int [] arr){
+    private static void selectionSort(int[] arr) {
 
-
-        for(int i=1;i<arr.length;i++){
-
-            System.out.println("Outer  loop  executed " +i+ " time");
-
-            for(int j=0;j<arr.length-i; j++){
-                if(isGreater(arr,j,j+1)){
-                    swap(arr,j,j+1);
+        for(int i=0;i<arr.length-1;i++){
+            System.out.println("Outer  loop  executed " +(i+1)+ " time");
+            int min = i;
+            for(int j=i+1;j<arr.length;j++){
+                if(isSmaller(arr,j,min)){
+                    min = j;
                 }
             }
+            swap(arr,i,min);
         }
 
-        System.out.println("Array after Bubble Sort");
+        System.out.println("Array after Selection Sort");
 
         for(int num: arr){
             System.out.print(num+ " ");
@@ -55,32 +53,29 @@ public class BubbleSort {
         arr[i] = temp;
     }
 
-    private static boolean isGreater(int[] arr, int j, int i) {
+    private static boolean isSmaller(int[] arr, int j, int i) {
 
-        if(arr[j]>arr[i]){
-            return true;
-        }
-        return false;
+        return arr[j] < arr[i];
     }
 }
 
-/*Enter Elements of the array
-6
-3
+/*
+Enter the size of the array
+5
+Enter Elements of the array
+5
 9
 8
 1
+2
 Outer  loop  executed 1 time
-Swapping 6 at position 0 with 3 at position 1
-Swapping 9 at position 2 with 8 at position 3
-Swapping 9 at position 3 with 1 at position 4
+Swapping 5 at position 0 with 1 at position 3
 Outer  loop  executed 2 time
-Swapping 8 at position 2 with 1 at position 3
+Swapping 9 at position 1 with 2 at position 4
 Outer  loop  executed 3 time
-Swapping 6 at position 1 with 1 at position 2
+Swapping 8 at position 2 with 5 at position 3
 Outer  loop  executed 4 time
-Swapping 3 at position 0 with 1 at position 1
-Array after Bubble Sort
-1 3 6 8 9
-
+Swapping 8 at position 3 with 8 at position 3
+Array after Selection Sort
+1 2 5 8 9
  */
