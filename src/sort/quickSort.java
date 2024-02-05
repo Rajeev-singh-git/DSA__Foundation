@@ -1,7 +1,5 @@
 package sort;
-
 import java.util.Scanner;
-
 public class quickSort {
 
     public static  void main(String [] args){
@@ -19,10 +17,8 @@ public class quickSort {
             arr[i]=scn.nextInt();
         }
 
-
        int low = 0;
        int high  = arr.length-1;
-
 
         quickSortt(arr,low, high);
         System.out.println("Array after quick sort");
@@ -30,7 +26,6 @@ public class quickSort {
         for(int res:arr){
             System.out.print(res +" ");
         }
-
     }
 
     private static void quickSortt(int[] arr,int low, int high) {
@@ -124,5 +119,5 @@ Pivot index -> 4
 Array after pivot
 3 9 10 11 18
 Array after quick sort
-3 9 10 11 18
+3 9 10 11 1
  */
