@@ -23,7 +23,6 @@ public class radixSort {
     private static void RadixSort(int[] arr) {
 
         int max = Integer.MIN_VALUE;
-
         for(int num: arr){
             if(num>max){
                 max=num;
@@ -31,17 +30,11 @@ public class radixSort {
         }
 
         int exp = 1;
-
         // Perform radix sort
         while(exp<=max){
             CountSort(arr,exp);
             exp = exp*10;
         }
-
-//        while (max / exp > 0) { // Correct stopping condition
-//            CountSort(arr, exp);
-//            exp *= 10;
-//        }
     }
 
     private static void CountSort(int[] arr, int exp) {
@@ -58,25 +51,20 @@ public class radixSort {
         for(int i=1;i<freqArr.length;i++){
             freqArr[i] += freqArr[i-1];
         }
-
        // converting it into prefix sum array
         int [] ans = new int [arr.length];
-
         //stable sorting(Filling ans array)
         for (int i=arr.length-1; i>=0;i--){
             int pos = freqArr[arr[i]/exp%10]-1;
             ans[pos] = arr[i];
             freqArr[arr[i]/exp%10]--;
         }
-
         //filling original array with the help of ans array
 
         for(int i=0;i<arr.length;i++){
             arr[i] = ans[i];
         }
-
     }
-
 }
 
 
