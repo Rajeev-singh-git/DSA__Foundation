@@ -18,7 +18,6 @@ public class countSort {
         for(int i=0;i<n;i++){
             arr[i]=scn.nextInt();
         }
-
         int min = arr[0];
         int max = arr[0];
 
@@ -29,9 +28,7 @@ public class countSort {
                 max = arr[i];
             }
         }
-
         CountSort(arr,min,max);
-
     }
 
     private static void CountSort(int[] arr, int min, int max) {
