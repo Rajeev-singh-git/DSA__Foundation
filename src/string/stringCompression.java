@@ -44,6 +44,7 @@ class stringCompression {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
+        System.out.println("Enter String ");
         String str = scn.next();
         System.out.println(compression1(str));
         System.out.println(compression2(str));
