@@ -9,7 +9,6 @@ public class highestFrequencyCharacter {
 
         Scanner scn = new Scanner(System.in);
         String str = scn.nextLine();
-
         HashMap<Character,Integer> hm = new HashMap<>();
 
         for(int i=0;i<str.length();i++){
@@ -30,9 +29,6 @@ public class highestFrequencyCharacter {
                 maxfreqChar = key;
             }
         }
-
         System.out.println(maxfreqChar +" is char with max frequency of " +hm.get(maxfreqChar));
-
-
-    }
+   }
 }
